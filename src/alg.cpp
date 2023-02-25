@@ -7,7 +7,7 @@ bool checkPrime(uint64_t value) {
     // вставьте код функции
     int count;
     count = 0;
-    for (int i = 1; i * i <= value; ++i) {
+    for (int i = 1; i * i <= value; i++) {
         if ((value % i == 0) && (value != 1))
             ++count;
     }
@@ -44,7 +44,7 @@ uint64_t nextPrime(uint64_t value) {
 uint64_t sumPrime(uint64_t hbound) {
     // вставьте код функции
     int sum = 0;
-    for (int i = 1; i < hbound; ++i) {
+    for (int i = 1; i < hbound; i++) {
         if (checkPrime(i))
             sum = sum + i;
     }
