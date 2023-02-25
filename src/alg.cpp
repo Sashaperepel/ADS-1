@@ -14,8 +14,9 @@ bool checkPrime(uint64_t value) {
     }
     if (count == 1)
         return true;
-    else
+    else {
         return false;
+    }
 }
 
 uint64_t nPrime(uint64_t n) {
@@ -40,8 +41,10 @@ uint64_t nextPrime(uint64_t value) {
     ++value;
     if (checkPrime(value)) {
         return value;
-    }   else
+    }   
+    else {
         nextPrime(value);
+    }
 }
 
 uint64_t sumPrime(uint64_t hbound) {
