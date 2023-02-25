@@ -2,7 +2,7 @@
 #include "alg.h"
 
 
-bool checkPrime (uint64_t value) {
+bool checkPrime(uint64_t value) {
 int count;
     count = 0;
     for (int i = 1; i * i <= value; ++i) {
@@ -16,12 +16,12 @@ int count;
         return false;
 }
 
-uint64_t nPrime (uint64_t n) {
+uint64_t nPrime(uint64_t n) {
 int value, count;
     value = 1;
     count = 0;
     while (n > count) {
-        if (checkPrime(value)) {
+        if (checkPrime (value)) {
             ++count;
         }
         ++value;
@@ -32,19 +32,19 @@ int value, count;
     return --value;
 }
 
-uint64_t nextPrime (uint64_t value) {
+uint64_t nextPrime(uint64_t value) {
 ++value;
-    if (checkPrime(value)) {
+    if (checkPrime (value)) {
         return value;
     }
     else
-        nextPrime(value);
+        nextPrime (value);
 }
 
-uint64_t sumPrime (uint64_t hbound) {
+uint64_t sumPrime(uint64_t hbound) {
 int sum = 0;
     for (int i = 1; i < hbound; ++i) {
-        if (checkPrime(i))
+        if (checkPrime (i))
             sum = sum + i;
     }
     return sum;
